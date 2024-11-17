@@ -1,0 +1,126 @@
+/* General grid layout for products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: 15px; /* Espacio entre los productos */
+  margin: 15px 0;
+}
+
+/* Product item styling */
+.product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px; /* Borde redondeado de las tarjetas */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto hover para elevar ligeramente el producto */
+.product-item:hover {
+  transform: translateY(-5px); 
+}
+
+/* Image styling */
+.product-item img {
+  width: 100px; /* Ajuste de tamaño de imagen */
+  height: auto;
+  margin-bottom: 12px;
+}
+
+/* Title styling */
+.product-item h4 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Description styling */
+.product-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Rating stars styling */
+.stars {
+  margin: 10px 0;
+}
+
+.star {
+  color: #FFD700; /* Color dorado para estrellas llenas */
+  font-size: 18px;
+}
+
+/* Quantity buttons and container */
+.quantity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  margin-top: 12px;
+  color: #000;
+}
+
+/* Styling for the + and - buttons in quantity */
+.quantity-container button {
+  background-color: #3381F5;
+  border: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px; 
+  transition: background-color 0.3s ease;
+}
+
+.quantity-container button:hover {
+  background-color: #002D63;
+}
+
+
+.quantity-container input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+.add-to-cart-btn {
+  background-color: #28a745; 
+  color: white;
+  padding: 10px 20px; 
+  font-size: 16px; 
+  font-weight: bold;
+  border: none; 
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+
+.add-to-cart-btn:hover {
+  background-color: #218838; 
+  transform: translateY(-3px); 
+}
+
+
+.add-to-cart-btn:active {
+  transform: translateY(0); 
+}
+
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr; 
+  }
+}
